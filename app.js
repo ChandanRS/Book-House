@@ -19,6 +19,7 @@ const bookingRouter = require('./routes/bookingRoutes')
 // const pug = require('pug');
 
 
+//Use Express
 const app=express();
 process.env.NODE_TLS_REJECT_UNAUTHORIZED='0';
 app.set('view engine', 'pug');
