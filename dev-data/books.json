@@ -1,0 +1,29 @@
+[
+    {
+        "id":"5ed88eb2216db4423488ef74",
+        "name":"Marali Mannige",
+        "author":"Shivarama Karanta",
+        "image":"/images/mm.jpg",
+        "description":"is a Kannada novel by novelist K. Shivaram Karanth. The novel has the story of three generations spanning from 1850 to 1940",
+        "price":"255₹",
+        "sellerName":""
+    },
+    {
+        "id":"5ed88eb2216db4423488ef75",
+        "name":"Mookajjiya Kanasugalu ",
+        "author":"Shivarama Karanta",
+        "image":"/images/mk.jpg",
+        "description":"is a 1968 Kannada epic novel written by K. Shivaram Karanth. It won Jnaanapeeta award for best novel in the year 1977.",
+        "price":"200₹",
+        "sellerName":""
+    },
+    {
+        "id":"5ed88eb2216db4423488ef76",
+        "name":"Malegalalli Madumagalu",
+        "author":"Kuvempu",
+        "image":"/images/mmk.jpeg",
+        "description":"is a 1967 Kannada novel by popular author and poet, Kuvempu. The title translates to 'The bride in the mountains.'",
+        "price":"300₹",
+        "sellerName":""
+    }
+]

@@ -1,0 +1,19 @@
+//HEADER
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+   
+    a.navbar-brand(href='/') Book House
+    
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+           
+        if user
+            a(style='color:white;').btn.btn-logout.btn-outline-success.my-2.my-sm-0 Log out
+            a(href='/me')
+                img.logged_in_user(src=`/images/${user.photo}`)
+            p.user_name= user.name.split(" ")[0]
+        else    
+            form.form-inline.my-2.my-lg-0
+                a.btn.btn-outline-success.my-2.my-sm-0(href='/login') Login
+                a.btn.btn-outline-success.my-2.my-sm-0(href='/signup') SignUp

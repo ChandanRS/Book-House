@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    .books-container.container-fluid.col-lg-12.col-md-6.col-sm-4
+        .box
+            .row
+                each book in books
+                    .card
+                        .card-img
+                            img(src=book.image)
+                        p.card-title.title=book.name.toUpperCase()
+                        .card-body
+                            //- #desc=book.description
+                            .info
+                                #info-1
+                                    i.fas.fa-pen-nib
+                                    p#author=book.author
+                                #info-1
+                                    i.fas.fa-language
+                                    p#language=book.language
+                            .info
+                                #info-1
+                                    i.fas.fa-star
+                                    p#ratings=`${book.ratingsAverage} Ratings(${book.ratingsQuantity})` 
+                                #info-1
+                                    i.fas.fa-rupee-sign
+                                    p#price=book.price
+                            .info
+                                #info-1
+                                    i.fas.fa-calendar(aria-hidden='true')
+                                    p=book.uploadedAt.toLocaleString('en-uk',{month: 'long',year :'numeric'})
+                                #info-1   
+                                    a.btn-success.btn.details-btn(href=`/book/${book.slug}`) Details

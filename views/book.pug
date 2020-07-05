@@ -1,0 +1,58 @@
+extends layout
+
+block append head
+    script(src='https://js.stripe.com/v3/')
+
+
+block content
+    .page1
+        h1#book-name= book.name
+        #book-cover.book-cover
+            img#cover-image(src=book.image)
+    .page2
+        #qf.facts
+            h1.heading QUICK FACTS
+            #qf-item
+                i.fas.fa-pen-nib
+                p#content=`AUTHOR :  ${book.author}`
+            #qf-item
+                i.fas.fa-language
+                p#content= `LANGUAGE :   ${book.language}`
+            #qf-item
+                i.fas.fa-star
+                p#content= `RATINGS  :   ${book.ratingsAverage}/5`
+            #qf-item
+                i.fas.fa-rupee-sign
+                p#content=  `PRICE  :   ${book.price}`
+            #qf-item
+                i.fas.fa-user    
+                p#content= `No Of Ratings:  ${book.ratingsQuantity}`
+        #ab.facts
+            h1.heading ABOUT 
+            p#book-desc=book.description
+            
+            
+    .page3
+        .review-box-container
+            each review in book.reviews
+                .review-box#review--box
+                    div.user-profile
+                        img.profile_pic(src=`/images/${review.user.photo}`)
+                        .user-name=review.user.name
+                    p#review-text=review.review
+                        //- | Lorem ipsum dolor sit,amet consectetur adipisicing elit. Libero, laboriosam amet
+                        //- | consectetur adipisicing elit. Libero, laboriosam!
+                    #stars 
+                        p= `Ratings :   ${review.rating}/5`
+                
+    .page4
+        .buy-now
+            div.quotes
+                h2#quote &quot;If Not Now Then When??&quot;
+                h4#quote2 Never put off till tomorrow the book you can read today..!!
+            //- button.button Buy Now!!
+            if user
+                button.button.btn.btn--green#buy-book(data-book-id=`${book.id}`) Buy now!
+            else
+                a.btn.button(href='/login') Login to buy
+                

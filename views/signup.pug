@@ -1,0 +1,26 @@
+extends layout
+
+block content
+        img.bg-img(src="images/bg-img.png")
+
+        div.form.form-group.login-box
+            h2#heading-login Sign Up to Book House
+            form.form--signup
+                .form__group
+                    label.col-md-2(for='name')
+                    | Name 
+                    input.form-control.col-md-8#name(type='name' placeholder='username')
+                .form__group
+                    label.col-md-2(for='email')
+                    | Email 
+                    input.form-control.col-md-8#email(type='email' placeholder='you@example.com')
+                .form__group
+                    label.col-md-2(for='password')
+                    | Password
+                    input.form-control.col-md-8#password(type='password' placeholder='Enter Your Password')
+                .form__group
+                    label.col-md-2(for='passwordConfirm')
+                    | Password
+                    input.form-control.col-md-8#passwordConfirm(type='password' placeholder='Confirm your Password')
+                .form__group
+                    button.btn.btn-success.col-md-8#btn--signup SIGNUP
