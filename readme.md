@@ -1,3 +1,3 @@
 #Book House Application
 
-Built using modern technologies: node.js,express,mongoDb and mongoose.
+Built using modern technologies: node.js,express,mongoDB and mongoose.
